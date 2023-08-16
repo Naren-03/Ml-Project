@@ -1,0 +1,9 @@
+{
+    "cSpell.ignoreWords": [
+        "HYPEN",
+        "myenv",
+        "requirments",
+        "venv"
+    ],
+    "python.analysis.typeCheckingMode": "basic"
+}
