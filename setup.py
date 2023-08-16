@@ -1,30 +1,33 @@
-from setuptools import setup,find_packages
+from setuptools import setup, find_packages
 from typing import List
 
-PROJECT_NAME = "Machine Learning"
+PROJECT_NAME = "Machine Learning Project"
 VERSION = "0.0.1"
-DESCRIPTION = "This is ML Project"
-AUTHOR_NAME = "Naren"
-AUTHOR_EMAIL = "narendra.m.savade@gmail.com"
+DESCRIPTION = "This is our machine learning project inmodular coding"
+AUTHOR_NAME = "Shivan Kumar"
+AUTHOR_EMIL = "dummy@successanalytics.ai"
 
 REQUIREMENTS_FILE_NAME = "requirements.txt"
-HYPEN_E_DOT = "-e ."
 
+HYPHEN_E_DOT = "-e ."
+# Requriments.txt file open
+# read
+# \n ""
 def get_requirements_list()->List[str]:
-    with open (REQUIREMENTS_FILE_NAME) as requirement_file:
-        requirement_list = requirement_file.readline()
-        requirement_list = [requirement_name.replace("\n","") for requirement_name in requirement_list]
+    with open(REQUIREMENTS_FILE_NAME) as requriment_file:
+        requriment_list = requriment_file.readlines()
+        requriment_list = [requriment_name.replace("\n", "") for requriment_name in requriment_list]
 
-        if HYPEN_E_DOT in requirement_list:
-            requirement_list.remove(HYPEN_E_DOT)
-        return requirement_list
+        if HYPHEN_E_DOT in requriment_list:
+            requriment_list.remove(HYPHEN_E_DOT)
 
-print(get_requirements_list)
+        return requriment_list
+
 setup(name=PROJECT_NAME,
       version=VERSION,
       description=DESCRIPTION,
       author=AUTHOR_NAME,
-      author_email=AUTHOR_EMAIL,
+      author_email=AUTHOR_EMIL,
       packages=find_packages(),
-      install_requires = get_requirements_list()
+      install_requries = get_requirements_list()
      )
