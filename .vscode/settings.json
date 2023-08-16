@@ -1,8 +1,12 @@
 {
     "cSpell.ignoreWords": [
         "HYPEN",
+        "Naren",
         "myenv",
+        "readline",
         "requirments",
+        "requriment_name",
+        "setuptools",
         "venv"
     ],
     "python.analysis.typeCheckingMode": "basic"
