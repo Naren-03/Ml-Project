@@ -1,7 +1,10 @@
 {
     "cSpell.ignoreWords": [
+        "CustomeException",
         "HYPEN",
         "Naren",
+        "exce_tb",
+        "levelname",
         "myenv",
         "readline",
         "requirments",
