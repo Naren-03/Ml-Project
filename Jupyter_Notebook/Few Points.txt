@@ -1,0 +1,39 @@
+Delivery person id is depend on city of country and for a each city there are mostly same id so we can groupby using that column to calculate the mean of rating of a person 
+
+1.If there is any null value for a delivery boy then we can calculate mean of other which belongs to the same cityy and assign the mean value to that delivery boy.
+
+
+2.If there is missing value of [Person id= AGRRES010DEL01] then need to fill with the mean value of that perticular person id because there are multiple person id with same values so we can calculate the mean of it and assign to the nan in rows 
+
+#Model Fitting
+We perform only fit_transform only on train data and perform transform on test data because 
+	
+I)FIT:-
+	i)Fitting data means to learn the parameters (like mean, standard deviation) from the training data.
+	ii)This means you're figuring out how to properly scale the data based on the characteristics of the training set.
+
+	EG- i)Imagine you're preparing to run a race.
+	    ii)Before the race, you measure the distance you need to cover. You're "fitting" your understanding to the race track.
+	    iii)In the context of scaling data, "fitting" means understanding the properties of your data, such as the mean and standard 			 deviation. You're learning about the data's distribution and central tendency.
+II)TRANSFORM:-
+	i)Applying what you've learned to new data.
+	
+	EG- i)Now you're actually running the race.
+	    ii)As you run, you adjust your pace to the conditions of the track. You're not changing the track itself; you're adapting your      		behavior to the track's characteristics.
+	   iii)In scaling data, "transforming" means adjusting your data based on what you learned during the "fitting" step. 
+	    iv)You're rescaling the data to have a similar scale, which helps algorithms work better.
+III)FIT_TRANSFORM:
+		i)Learning and immediately applying what you've learned to the same data.
+	
+	EG- i)Consider practicing running on a specific track before the race.
+	    ii)You both learn about the track (fit) and adjust your running (transform) all at once.
+	    iii)In scaling data, "fit_transform" combines both fitting and transforming.
+	    iv)It learns the properties of the data distribution and immediately adjusts the data to the desired scale
+
+
+In summary:
+Fit: Learning from the data.
+Transform: Applying what you've learned to new data.
+Fit_Transform: Learning and immediately applying what you've learned to the same data.
+
+ANSWER=>"When we're getting our data ready for a test (like scaling it), we use 'transform' instead of 'fit'. Using 'fit' on the test data could accidentally make it learn from the transformations, which is not what we want. 'Transform' just applies the changes we learned from the practice data (training data) to the new data (test data). This helps keep everything fair and accurate."
