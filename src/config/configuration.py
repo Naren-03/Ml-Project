@@ -27,3 +27,22 @@ TEST_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_INGESTION_KEY, CU
                                DATA_INGESTION_INGESTED_DATA_DIR_KEY, TEST_DATA_DIR_KEY)
 # It will create a test.csv file to store test dataset C:\Users\Naren\source\repos\OneDrive\Desktop\GitHub\Ml-Project\src\config\Artifact\data_ingestion\2023-08-31 10-38-18\ingested_dir\test.csv
 
+
+
+# Data Transformation steps
+
+
+PREPROCESSING_OBJ_FILE = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT, 
+                                     DATA_PREPROCESSED_DIR, DATA_TRANSFORMATION_PROCESSING_OBJ)
+
+TRANSFORM_TRAIn_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+                                         DATA_TRANSFORM_DIR, TRANSFORM_TRAIN_DIR_KEY)
+
+
+TRANSFORM_TEST_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+                                         DATA_TRANSFORM_DIR, TRANSFORM_TEST_DIR_KEY)
+
+
+
+FEATURE_ENGG_OBJ_FILE_PATH = os.path.join(ROOT_DIR, ARTIFACT_DIR_KEY, DATA_TRANSFORMATION_ARTIFACT,
+                                          DATA_PREPROCESSED_DIR,' feature_engg.pkl')
