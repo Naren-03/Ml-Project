@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from src.logger import logging
 from src.exception import CustomException
 from src.components.data_transformation import DataTransformation, DataTransformationConfig
-
+from src.components.model_trainer import ModelTrainer 
 
 @dataclass
 class DataIngestionConfig:
@@ -21,13 +21,11 @@ class DataIngestionConfig:
 class DataIngestion:
     def __init__(self):
         self.data_ingestion_config = DataIngestionConfig()
-
+        # print(DATASET_PATH)
 
     def initiate_data_ingestion(self):
         try:
             df = pd.read_csv(DATASET_PATH)
-
-
             os.makedirs(os.path.dirname(self.data_ingestion_config.raw_data_path), exist_ok=True)
 
             df.to_csv(self.data_ingestion_config.raw_data_path, index = False)
@@ -48,10 +46,22 @@ class DataIngestion:
 
         except Exception as e:
             raise CustomException(e,sys) # type: ignore
+        
+
 # Data Ingestion
 
+# if __name__ == "__main__":
+#     obj = DataIngestion()
+#     train_data_path,test_data_path=obj.initiate_data_ingestion()
+#     data_transformation = DataTransformation()
+#     train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
+
+
+# Model Training
 if __name__ == "__main__":
     obj = DataIngestion()
     train_data_path,test_data_path=obj.initiate_data_ingestion()
     data_transformation = DataTransformation()
     train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
+    model_trainer = ModelTrainer()
+    print(model_trainer.initiate_model_training(train_arr,test_arr))
